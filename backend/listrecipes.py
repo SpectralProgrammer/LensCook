@@ -10,7 +10,7 @@ def list_recipes(ingredients, num_of_recipes, ranking, limit_license, ignore_pan
   Returns a list of Recipe objects (see Recipe.py)
   """
   # Make secret when transfer to VS Code
-  api_key = "7d29819476a947b7aab9295f0127fd9f"
+  api_key = "785a8ee07e814bfb9e1e4062897c3030"
   
   url = "https://api.spoonacular.com/recipes/findByIngredients"
 

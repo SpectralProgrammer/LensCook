@@ -14,7 +14,7 @@ class Recipe:
     self.imageURL = imageURL
     self.likes = likes
 
-    self.api_key = "cdb83bb09ab34421bb8b320d74d9b505" # update this later
+    self.api_key = "785a8ee07e814bfb9e1e4062897c3030" # update this later
     
     self.ingredientsUsed = ingredientsUsed
     self.ingredientsUnused = ingredientsUnused

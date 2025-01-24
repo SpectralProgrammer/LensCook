@@ -8,7 +8,7 @@ import json
 # I love coding - Komal Jan 20th 2024 at 2:42 AM 
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "key.json"
-api_key = "7d29819476a947b7aab9295f0127fd9f"
+api_key = "785a8ee07e814bfb9e1e4062897c3030"
 
 def find_ingredients(path):
     """Localize objects in the local image and draw bounding polygons with labels.
