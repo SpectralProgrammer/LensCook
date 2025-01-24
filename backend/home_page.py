@@ -81,23 +81,25 @@ if ingredients_pic is not None:
 
     if modify_choice == "yes":
         new_ing = st.text_input("Type updated ingredients list (separated by commas)", d_ings)
-        st.write(new_ing)
+        if new_ing:
+            ingredients = [ing.strip() for ing in new_ing.split(",")]
+        st.write(f"Updated ingredients: {', '.join(ingredients)}")
 
     confirm = st.button("Confirm Choices and start curating recipes")
 
-    print(d_ings)
+    if confirm:
+        print(d_ings)
+        recipes = list(set(list_recipes(ingredients, num_of_recipes, ranking, limit_license, ignore_pantry)))
 
-    recipes = list(set(list_recipes(ingredients, num_of_recipes, ranking, limit_license, ignore_pantry)))
-
-    ingredients_found = False
-
-    if recipes:
-        ingredients_found = True
-        recipes.sort(key= lambda x: x.likes, reverse=True)
-
-        printRecipes(recipes)
-    else:
         ingredients_found = False
-        print("No recipes / ingredients found.")
+
+        if recipes:
+            ingredients_found = True
+            recipes.sort(key= lambda x: x.likes, reverse=True)
+
+            printRecipes(recipes)
+        else:
+            ingredients_found = False
+            print("No recipes / ingredients found.")
 else:
     st.write("")
