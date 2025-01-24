@@ -17,12 +17,15 @@ def list_recipes(ingredients, num_of_recipes, ranking, limit_license, ignore_pan
 
   # while num_recipes_generated < num_of_recipes:    
     # To add parameter, add the following: "&parameter=value"
-  query_params = f"apiKey={api_key}&ingredients={ingredients}&number={num_of_recipes + 2}&ranking={ranking}&limitLicense={limit_license}&ignorePantry={ignore_pantry}"
+  query_params = f"apiKey={api_key}&ingredients={ingredients}&number={num_of_recipes + 2}"
   
   query = url + "?" + query_params
 
   # json
   response = requests.get(query).json()
+
+  print("Ingredients Passed:", ingredients)
+  print("Recipes Found:", response)
 
   recipes = []
   recipecount = 0
@@ -52,3 +55,5 @@ def list_recipes(ingredients, num_of_recipes, ranking, limit_license, ignore_pan
 
     if recipecount >= num_of_recipes:
       return recipes
+
+  return recipes  # Ensure a list is always returned

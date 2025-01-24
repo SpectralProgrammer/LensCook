@@ -15,7 +15,7 @@ def printRecipes(recipes):
         st.write(f"{recipe.likes} likes")
 
         url = recipe.imageURL
-        st.write(url)
+        st.image(url)
 
         st.write("----")
         ing_used = ", ".join(ingredient for ingredient in recipe.ingredientsUsed)
@@ -38,14 +38,14 @@ with st.sidebar:
 st.divider()
 
 num_of_recipes = st.number_input("Number of recipes: ", min_value=1)
-num_of_servings = st.slider("Server: ", min_value=1, max_value=20)
+num_of_servings = st.slider("Servings: ", min_value=1, max_value=20)
 
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     dish_types = st.radio("Select dish type: ", ["Breakfast", "Lunch", "Dinner"])
 with col2:
-    time_needed = st.radio("Cook times: ", ["Quick", "Normal", "Sophisticated"])
+    time_needed = st.radio("Cook times: ", ["Quick", "Normal", "Complex"])
 with col3:
     price_choice = st.radio("Preparation price: ", ["Cheap", "Expensive"])
 with col4:
@@ -67,6 +67,8 @@ if ingredients_pic is not None:
 
     ingredients = imagedetect.find_ingredients(path=saved_path)
 
+    print("Ingredients found in image: " + str(ingredients))
+
     ranking = 2 # reduce missing ingredients   
     limit_license = "true"
     ignore_pantry = "false"
@@ -83,7 +85,9 @@ if ingredients_pic is not None:
 
     confirm = st.button("Confirm Choices and start curating recipes")
 
-    recipes = list(set(list_recipes(ingredients, num_of_recipes, ranking, limit_license, ignore_pantry, allergens_control, time_needed, price_choice, recipe_preferences, dish_types)))
+    print(d_ings)
+
+    recipes = list(set(list_recipes(ingredients, num_of_recipes, ranking, limit_license, ignore_pantry)))
 
     ingredients_found = False
 
