@@ -1,6 +1,6 @@
 # LensCook
 
-**LensCook: Let’s Cook Together**
+## LensCook: Let’s Cook Together
 
 LensCook is a web and mobile application that recommends diverse, healthy recipes based on photographed ingredients. Originally developed during a 36-hour hackathon, the app integrates the **Google Cloud Vision API** and **Spoonacular API** to analyze user-submitted food images and return relevant recipe suggestions.
 
