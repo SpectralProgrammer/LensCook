@@ -10,8 +10,7 @@ Users can either take a photo using the in-app camera or upload an image of ingr
 
 ## 🏆 Recognition
 
-- 🥇 **First Place Winner** — *Health and Wellness* category  
-  [Hackathon by the Sea](https://www.vcoe.org/), hosted by Ventura County Office of Education  
+- 🥇 **First Place Winner** — *Health and Wellness* category
 - 👥 Developed by a team of four during a 36-hour hackathon with 200+ participants
 
 ## 📺 Demo
