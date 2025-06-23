@@ -20,8 +20,7 @@ Users can either take a photo using the in-app camera or upload an image of ingr
 
 ## 🔧 Technologies Used
 
-- **Frontend (Web):** Streamlit, CSS  
-- **Mobile Prototype:** Flutter  
+- **Frontend (Web):** Streamlit, CSS
 - **Backend:** Python, Firebase, REST API  
 - **APIs:** Google Cloud Vision API, Spoonacular API
 
@@ -31,4 +30,3 @@ Users can either take a photo using the in-app camera or upload an image of ingr
 - Ingredient detection via Google Cloud Vision API
 - Recipe suggestions powered by Spoonacular API
 - Responsive web interface with Streamlit
-- Mobile prototype using Flutter with Firebase integration
