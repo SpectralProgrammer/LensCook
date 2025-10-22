@@ -30,3 +30,8 @@ Users can either take a photo using the in-app camera or upload an image of ingr
 - Ingredient detection via Google Cloud Vision API
 - Recipe suggestions powered by Spoonacular API
 - Responsive web interface with Streamlit
+
+## Contributors
+- [Subhash Srinivasa](https://github.com/SubhashSrinivasa) — implemented Spoonacular and Google Vision API integration
+- [Shravan Devraj]
+- [Jason Xie]

@@ -11,7 +11,8 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "key.json"
 api_key = "785a8ee07e814bfb9e1e4062897c3030"
 
 def find_ingredients(path):
-    """Localize objects in the local image and draw bounding polygons with labels.
+    """Use Google Vision AI to Localize objects in the local image and draw 
+       bounding polygons with labels.
 
     Args:
     path: The path to the local file.
